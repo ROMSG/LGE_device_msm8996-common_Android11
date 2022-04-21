@@ -427,6 +427,9 @@ PRODUCT_PACKAGES += \
 # Doze mode
 PRODUCT_PACKAGES += \
     LGDoze
+  
+# Microg Settings
+WITH_GMS := true
     
 # Do not enforce privapp-permissions whitelist
 PRODUCT_PROPERTY_OVERRIDES += \
