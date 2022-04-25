@@ -402,6 +402,10 @@ PRODUCT_PACKAGES += \
     GCam \
     GCam_Spoof 
 
+#Gcam PrivApp Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/Gcam/privapp-permissions-gcam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-gcam.xml \
+
 #Disable Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -431,6 +435,3 @@ PRODUCT_PACKAGES += \
 # Microg Settings
 WITH_GMS := true
     
-# Do not enforce privapp-permissions whitelist
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.control_privapp_permissions=permissive   
