@@ -404,7 +404,7 @@ PRODUCT_PACKAGES += \
 
 #Gcam PrivApp Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/Gcam/privapp-permissions-gcam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-gcam.xml \
+    $(LOCAL_PATH)/GCam/privapp-permissions-gcam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-gcam.xml \
 
 #Disable Dexpreopt
 ifeq ($(HOST_OS),linux)
