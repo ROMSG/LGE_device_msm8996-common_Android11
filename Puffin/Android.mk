@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := DDG
+LOCAL_MODULE := Puffin
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := Puffin.apk
 LOCAL_CERTIFICATE := PRESIGNED
