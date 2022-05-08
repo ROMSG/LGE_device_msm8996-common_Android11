@@ -424,9 +424,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GBoard
     
-# Puffin
+# Duck Duck Go
 PRODUCT_PACKAGES += \
-    Puffin
+    DDG
     
 # Doze mode
 PRODUCT_PACKAGES += \
