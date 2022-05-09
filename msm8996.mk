@@ -251,6 +251,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
+# Miracast
+PRODUCT_PROPERTY_OVERRIDES += \
+		persist.debug.wfd.enable=1
+
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
@@ -391,7 +395,13 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
+    libaacwrapper \
     libnl
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
+
 
 # CryptfsHW
 PRODUCT_PACKAGES += \

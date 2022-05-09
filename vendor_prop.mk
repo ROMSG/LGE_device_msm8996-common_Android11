@@ -125,7 +125,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.late.app.duration=20500000 \
     debug.sf.late.sf.duration=10500000 \
-    debug.sf.use_phase_offsets_as_durations=1
+    debug.sf.use_phase_offsets_as_durations=1 \
+		vendor.gralloc.enable_fb_ubwc=1 \
+		vendor.gralloc.disable_wb_ubwc=1 \
+		persist.debug.wfd.enable=1 \
+		persist.sys.wfd.nohdcp=1 \
+		debug.sf.enable_hwc_vds=1
 
 # HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -223,8 +228,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
-    
-    
+       
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=6a00000.dwc3 \
