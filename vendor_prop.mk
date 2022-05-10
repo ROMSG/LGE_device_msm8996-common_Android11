@@ -238,6 +238,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.usb.rmnet.inst.name=rmnet \
     vendor.usb.rndis.func.name=rndis_bam
 
+# Usage Data. bye bye google.
+ro.config.nocheckin=1
+
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
