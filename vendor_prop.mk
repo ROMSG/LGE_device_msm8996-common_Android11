@@ -147,6 +147,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_large_cache_height=2048 \
     ro.hwui.render_ahead=1
 
+#Launcher: Keep launcher in memory
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.HOME_APP_ADJ = 1
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable.pq=true \
@@ -163,6 +167,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.min_freq_4=307200 \
     ro.sys.fw.bg_apps_limit=60 \
     ro.vendor.extension_library=libqti-perfd-client.so
+
+#Rotation
+PRODUCT_PROPERTY_OVERRIDES += \
+	lockscreen.rot_override=true #Allows rotation on the lockscreen
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -201,6 +209,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.radio.NO_STAPA=1 \
     persist.radio.VT_HYBRID_ENABLE=1
+
+#Scrolling tweaks
+	PRODUCT_PROPERTY_OVERRIDES += \
+	windowsmgr.max_events_per_sec=150
+	ro.min_pointer_dur=8 
+	ro.max.fling_velocity=12000
+	ro.min.fling_velocity=8000
+	persist.sys.scrollingcache=3
 
 # Security Patch Level
 PRODUCT_PROPERTY_OVERRIDES += \
