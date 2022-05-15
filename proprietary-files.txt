@@ -13,6 +13,7 @@ vendor/lib64/libseemore.so
 # Camera postprocessing - mmcamera
 vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libmmcamera_llvd.so
+vendor/lib/libllvd_smore.so
 vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_quadracfa.so
 vendor/lib/libremosaic_daemon.so
