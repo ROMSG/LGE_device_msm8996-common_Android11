@@ -139,7 +139,15 @@ on early-boot
 on boot
     # Bring up CPUs
     start vendor.power-sh
-
+    
+    #Cpuset for the camera daemon
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0-3
+    write /dev/cpuset/camera-daemon/mems 0
+    chown system system /dev/cpuset/camera-daemon
+    chown system system /dev/cpuset/camera-daemon/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/tasks
+    
     # Set permissions by node reads by dumpstate
     chmod 0644 /sys/devices/system/cpu/present
     chmod 0644 /sys/devices/system/cpu/online
