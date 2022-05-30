@@ -153,6 +153,17 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system
 
 
+<<<<<<< HEAD
+=======
+# LGE settings
+PRODUCT_PACKAGES += \
+    LGESettings
+
+# Doze mode
+PRODUCT_PACKAGES += \
+    LGDoze
+>>>>>>> 334c330d... [SQUASH] Add LGE settings
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -335,6 +346,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 334c330d... [SQUASH] Add LGE settings
 
     
 # TimeKeep
@@ -435,10 +451,6 @@ PRODUCT_PACKAGES += \
 # Duck Duck Go
 PRODUCT_PACKAGES += \
     DDG
-    
-# Doze mode
-PRODUCT_PACKAGES += \
-    LGDoze
   
 # Microg Settings
 WITH_GMS := true
