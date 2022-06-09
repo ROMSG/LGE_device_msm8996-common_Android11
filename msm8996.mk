@@ -152,6 +152,14 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData.system
 
+# LGE settings
+PRODUCT_PACKAGES += \
+    LGESettings
+
+# Doze mode
+PRODUCT_PACKAGES += \
+    LGDoze
+
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -334,9 +342,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-
-    
+  
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
@@ -435,10 +441,6 @@ PRODUCT_PACKAGES += \
 # Duck Duck Go
 PRODUCT_PACKAGES += \
     DDG
-    
-# Doze mode
-PRODUCT_PACKAGES += \
-    LGDoze
   
 # Microg Settings
 WITH_GMS := true

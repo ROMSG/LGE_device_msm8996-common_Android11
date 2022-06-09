@@ -116,6 +116,9 @@ TARGET_LD_SHIM_LIBS := \
 USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+    /vendor/bin/mm-qcamera-daemon=28
+
 # CMHW
 BOARD_HARDWARE_CLASS += $(COMMON_PATH)/lineagehw
 
