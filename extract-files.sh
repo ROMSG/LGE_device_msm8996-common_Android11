@@ -23,9 +23,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    vendor/lib/hw/camera.msm8996.so)
-        sed -i "s/service.bootanim.exit/service.bootanim.zzzz/g" "${2}"
-        ;;
     vendor/lib64/libsettings.so)
         patchelf --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v28.so" "${2}"
         ;;

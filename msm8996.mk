@@ -152,9 +152,6 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData.system
 
-
-<<<<<<< HEAD
-=======
 # LGE settings
 PRODUCT_PACKAGES += \
     LGESettings
@@ -162,7 +159,7 @@ PRODUCT_PACKAGES += \
 # Doze mode
 PRODUCT_PACKAGES += \
     LGDoze
->>>>>>> 334c330d... [SQUASH] Add LGE settings
+
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -345,14 +342,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 334c330d... [SQUASH] Add LGE settings
-
-    
+  
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
