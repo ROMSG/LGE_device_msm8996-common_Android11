@@ -413,22 +413,11 @@ PRODUCT_PACKAGES += \
 
 # GCam 
 PRODUCT_PACKAGES += \
-    GCam \
-    GCam_Spoof 
+    GCam 
 
 #Gcam PrivApp Permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/GCam/privapp-permissions-gcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-gcam.xml \
-
-#Disable Dexpreopt
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := false
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-    endif
-  endif
-endif
 
 # GalleryGO
 PRODUCT_PACKAGES += \
@@ -443,5 +432,5 @@ PRODUCT_PACKAGES += \
     DDG
   
 # Microg Settings
-WITH_GMS := true
+#WITH_GMS := true
     
