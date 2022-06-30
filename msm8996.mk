@@ -83,6 +83,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
@@ -92,6 +93,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@6.0-util \
     android.hardware.audio.effect@6.0 \
     android.hardware.audio.effect@6.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.primary.msm8996 \
     audio.r_submix.default \
@@ -403,31 +405,18 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
-
-
-
 # CryptfsHW
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 # GCam 
 PRODUCT_PACKAGES += \
-    GCam \
-    GCam_Spoof 
+    GCam 
 
 #Gcam PrivApp Permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/GCam/privapp-permissions-gcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-gcam.xml \
 
-#Disable Dexpreopt
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := false
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-    endif
-  endif
-endif
 
 # GalleryGO
 PRODUCT_PACKAGES += \
@@ -442,5 +431,5 @@ PRODUCT_PACKAGES += \
     DDG
   
 # Microg Settings
-WITH_GMS := true
+#WITH_GMS := true
     
